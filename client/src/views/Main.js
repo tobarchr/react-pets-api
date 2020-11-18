@@ -21,7 +21,7 @@ const Main = props => {
             <div>
             <Link to ="/pets/new" className="nav_bar"><h4>Add New</h4></Link>
             </div>
-            <h3 className="sub_header">These pets are looking for a good home</h3>
+            <h3 className="">These pets are looking for a good home</h3>
             <table className="table">
                 <thead className="thead-dark">
                     <tr>

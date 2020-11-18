@@ -12,7 +12,7 @@ const Form = props => {
                                 <label>Pet Name:</label>
                                 <input type="text" name="name" className="form-control" onChange={props.onChangeHandler} value={props.form.name} />
                                 {
-                                    props.error.name ? <div className="alert alert-danger" role="alert">{console.log(props.error.name.message)}</div> : ""
+                                    props.error.name ? <div className="alert alert-danger" role="alert">{props.error.name.message}</div> : ""
                                 }
                             </div>
                             <div className="col form-group">

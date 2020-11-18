@@ -25,7 +25,7 @@ module.exports.deletePet = (req,res) =>{
 }
 
 module.exports.updatePet = (req,res) =>{
-    Pet.update({_id: req.params._id},
+    Pet.findOneAndUpdate({_id: req.params._id},
         {$set: {
             name: req.body.name,
             type: req.body.type,
@@ -33,7 +33,7 @@ module.exports.updatePet = (req,res) =>{
             skill_1: req.body.skill_1,
             skill_2: req.body.skill_2,
             skill_3: req.body.skill_3,
-        }},{runValidators: true})
+        }},{runValidators: true, context: 'query'})
         .then(allPets => res.json({pets: allPets}))
         .catch(err => res.json({message: "Something went wrong!",error: err}))
 }
